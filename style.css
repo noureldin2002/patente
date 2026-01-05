@@ -268,8 +268,7 @@ li a {
 ul {
   display: flex;
   justify-content: center;
-  margin-top: -45px;
-  flex-wrap: nowrap;
+
 }
 
 ul li:hover a {
