@@ -65,7 +65,9 @@ body {
 .title-ar {
   font-size: clamp(2.3rem, 2.5vw, 1.6rem);
   color: black;
-  margin: 0
+  margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .hero {
@@ -251,6 +253,7 @@ li {
   list-style: none;
   /* rimuove i pallini */
   margin-bottom: 15px;
+  padding: 5px;
 
 }
 
@@ -260,10 +263,18 @@ li a {
   color: black;
   padding: 5px;
 
-
   justify-content: flex-end;
-  /* testo + icona allineati a destra */
+
+
 }
+
+.ar {
+  font-family: "Playpen Sans Arabic", serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.9;
+}
+
 
 ul {
   display: flex;
