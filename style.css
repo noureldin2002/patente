@@ -1,0 +1,515 @@
+:root {
+  --max: 1100px;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --radius: 16px;
+  --brand: #2a6f97;
+  --brand-2: #e9f2f8;
+  --text: #0f172a;
+  --muted: #475569;
+  --card-bg: #fff;
+  --card-border: #e6eef4;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Cairo", "Tajawal", sans-serif;
+  color: var(--text);
+  background-color: rgba(56, 138, 213, 0.907)
+}
+
+.container {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--space-2)
+}
+
+.site-header {
+  border-bottom: 1px solid #e6eef4;
+  background-color: #f6fbfd;
+  box-shadow: 0 4px 15px rgba(33, 31, 27, 0.3);
+  border-radius: 50px;
+  /* curvo ma non eccessivo */
+  margin: 10px 15px;
+  /* margine uniforme */
+  padding: 0.5rem 1rem;
+  /* spazio interno per il contenuto */
+  transition: all 0.3s ease;
+  /* più fluido al resize */
+}
+
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 0
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin: 0px;
+
+
+}
+
+.title-ar {
+  font-size: clamp(2.3rem, 2.5vw, 1.6rem);
+  color: black;
+  margin: 0
+}
+
+.hero {
+  position: relative;
+  /* fa da contenitore per posizionare sopra la foto */
+  width: min(100%, 620px);
+  /* la hero ha la stessa larghezza massima della foto */
+  margin-inline: auto;
+  /* centrata nella pagina */
+  padding: clamp(1rem, 4vw, 3rem) 0;
+  /* puoi tenerlo */
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  /* la foto riempie la hero */
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 25px rgb(33, 31, 27);
+}
+
+
+.section-title {
+  margin: var(--space-3) 0 var(--space-2)
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 0 0 var(--space-3) 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: 15px;
+  overflow: clip;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+
+  box-shadow: 0 8px 25px rgb(15, 86, 220);
+  /* ombra blu */
+  border-color: rgba(12, 12, 180, 0.826);
+
+}
+
+
+
+
+.card:where(:hover, :focus-within) {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 24px rgba(39, 20, 20, 0.722);
+  border-color: var(--brand);
+}
+
+.card-img {
+  width: auto;
+  height: 220px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: var(--space-2)
+}
+
+.card-title {
+  margin: 0 0 .25rem 0;
+  font-size: 1rem
+}
+
+.card-title-ar {
+  margin: 0;
+  color: var(--muted)
+}
+
+/* Accessibilità: utility per nascondere solo visivamente */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* RTL specifico per i testi arabi */
+:lang(ar) {
+  font-family: "Tajawal", "Cairo", system-ui, sans-serif
+}
+
+.menu-btn {
+  background: #2a6f97;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.menu {
+  display: none;
+  /* nascosto di default */
+  background: #f1f5f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #0f172a;
+  padding: -8px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: #2a6f97;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
+
+.icon1 {
+  width: 15px;
+}
+
+.slide {
+  margin: 0px;
+
+  height: 22%;
+
+  width: 190px;
+  background-color: none;
+  position: absolute;
+  text-align: left;
+  /* allinea tutto a sinistra */
+  direction: ltr;
+  /* imposta direzione da sinistra a destra SOLO qui */
+  padding-left: 1px;
+  /* piccolo margine interno a sinistra */
+  border: solid 1px rgb(32, 168, 202);
+
+  box-sizing: border-box;
+  border-radius: 30px;
+  left: 74%;
+  top: 30%;
+  transform: scale(1%);
+  transition: .7s ease;
+  box-shadow: 0 0 10px 5px rgba(48, 112, 239, 0.3);
+
+
+
+
+}
+
+li {
+
+  margin-bottom: 16px;
+  /* distanza tra le voci */
+}
+
+.slide h1 {
+  margin-bottom: 15px;
+
+}
+
+
+
+li {
+  list-style: none;
+  /* rimuove i pallini */
+  margin-bottom: 15px;
+
+}
+
+li a {
+
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+
+
+  justify-content: flex-end;
+  /* testo + icona allineati a destra */
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  margin-top: -45px;
+  flex-wrap: nowrap;
+}
+
+ul li:hover a {
+  color: rgb(0, 0, 0);
+  background-color: rgba(56, 137, 213, 0.557);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(42, 79, 97, 0);
+
+}
+
+ul li a img {
+  margin-left: 10px;
+
+
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 44px;
+}
+
+input {
+
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+
+}
+
+/* bottone al centro dell'header */
+.tm {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  transform: none;
+  /* niente translateX */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  height: 40px;
+  background: none;
+  border-radius: 12px;
+  border: 1px solid rgb(32, 168, 202);
+  box-shadow: 0 0 10px 3px rgba(48, 112, 239, 0.3);
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+/* hamburger “contenitore” */
+.tm-burger {
+  position: relative;
+  width: 22px;
+  height: 14px;
+}
+
+/* le 3 linee */
+.tm .common {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.tm .top_line {
+  top: 0;
+}
+
+.tm .middle_line {
+  top: 6px;
+}
+
+.tm .bottom_line {
+  bottom: 0;
+}
+
+/* testo */
+.tm-label {
+  font: 600 18px/1.2 system-ui, sans-serif;
+  color: #0f172a;
+  white-space: nowrap;
+  /* non andare a capo */
+  margin: 0;
+  /* niente margini come nei <h3> */
+}
+
+/* animazione in X */
+input {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+
+input:checked+.tm .top_line {
+  transform: translateY(6px) rotate(45deg);
+}
+
+input:checked+.tm .middle_line {
+  opacity: 0;
+}
+
+input:checked+.tm .bottom_line {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* slide: usa scala 0/1, non 1% */
+.slide {
+  /* …i tuoi stili… */
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform .7s ease;
+}
+
+input:checked~.slide {
+  transform: scale(1);
+}
+
+.menu_g {
+  text-align: center;
+  display: contents;
+}
+
+/* apre il menu quando il checkbox è spuntato */
+#nav-toggle:checked+.tm+.slide {
+  transform: scale(1);
+}
+
+/* Mobile (default) */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.nav {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+}
+
+/* Breakpoint tablet */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Breakpoint desktop */
+@media (min-width: 900px) {
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .nav {
+    justify-content: center;
+    overflow: visible;
+  }
+}
+
+/* Mobile (default) */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.nav {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+}
+
+/* Breakpoint tablet */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Breakpoint desktop */
+@media (min-width: 900px) {
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .nav {
+    justify-content: center;
+    overflow: visible;
+  }
+}
+
+.slide ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide li+li {
+  margin-top: .5rem;
+}
+
+.slide a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  color: #0f172a;
+  padding: .5rem .6rem;
+  border-radius: 8px;
+}
+
+.slide a:hover {
+  background: #7964f0;
+  color: #fff;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+.icon1 {
+  width: 15px;
+}

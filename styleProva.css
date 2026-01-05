@@ -1,0 +1,30 @@
+.site-header {
+
+    border-bottom: 1px #e6eef4;
+    background-color: f6fbfd;
+    box-shadow: 0 8px 25px rgb(33, 31, 27);
+    border-radius: 120px;
+    margin-left: 3px;
+
+
+
+
+}
+
+.tm {
+
+    position: absolute;
+    top: 35px;
+    background-color: white;
+    z-index: 1;
+    height: 30px;
+    width: 30px;
+
+
+    left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+
+
+}

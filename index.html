@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patente in Arabo</title>
+
+    <!-- favicon: usa un percorso relativo, non C:\ -->
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+
+    <link rel="preload" href="images/hero.webp" as="image">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="site-header">
+
+        <div class="container header-bar">
+
+            <h1 class="title">Patente Italiana</h1>
+            <h1 class="title-ar" lang="ar" dir="rtl">الرخصة بالعربي</h1>
+        </div>
+
+
+    </header>
+    <section>
+
+
+        <ul>
+            <li><a href="#"><img src="images/team.png" class="icon1" alt=""> من نحن</a></li>
+            <li><a href="#"><img src="images/contact.png" class="icon1" alt=""> اتصل بنا</a></li>
+            <li><a href="#"><img src="images/service.png" class="icon1" alt=""> الخدمات</a></li>
+            <li><a href="#"><img src="images/advice.png" class="icon1" alt=""> نصائح</a></li>
+        </ul>
+
+    </section>
+
+
+
+
+    <main class="container">
+
+
+        <section class="hero" aria-labelledby="hero-title">
+            <h2 id="hero-title" class="sr-only">Autoscuola Nour</h2>
+            <img src="images/ciao.png" alt="Studente sorridente mostra la patente davanti al poster Autoscuola Nour"
+                width="960" height="540" loading="eager" class="hero-img">
+        </section>
+
+
+        <section aria-labelledby="chapters-title">
+            <h1 id="chapters-title" class="section-title" style="text-align: center;">Capitoli / <span lang="ar"
+                    dir="rtl">الفصول</span></h1>
+
+            <!-- Un solo ID, niente duplicati -->
+            <ul id="capitoli" class="card-grid" role="list" style="text-align: center;">
+                <!-- Le card vengono inserite da srcipt.js -->
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">© Autoscuola Nour</div>
+    </footer>
+
+    <!-- Carica il JS corretto (prima avevi "srcipt.js") -->
+    <script src="srcipt.js" defer></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,20 @@
+.primo {
+    width: 500px;
+    background-color: pink;
+    transition-duration: 1000ms;
+    transition-property: width;
+    transition-timing-function: ease-out;
+    transition-delay: 0.2s;
+
+    box-sizing: border-box;
+    height: 160px;
+
+
+}
+
+.primo:hover {
+    margin-left: 10px;
+    width: 1000px;
+
+    margin-top: 10px;
+}
