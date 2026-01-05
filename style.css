@@ -24,7 +24,7 @@ body {
   margin: 0;
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Cairo", "Tajawal", sans-serif;
   color: var(--text);
-  background-color: rgba(56, 138, 213, 0.907)
+  background-color: rgba(145, 202, 255, 0.907)
 }
 
 .container {
@@ -265,8 +265,19 @@ li a {
 
   justify-content: flex-end;
 
+  display: inline-block;
+
+
 
 }
+
+
+li a img {
+  display: block;
+  /* 🔑 manda l’icona sopra */
+  margin: 0 auto;
+}
+
 
 .ar {
   font-family: "Playpen Sans Arabic", serif;
